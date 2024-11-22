@@ -1,37 +1,37 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Roboto";
-  src: url("/fonts/Roboto-Light.woff2") format("woff2");
+  src: url("../fonts/Roboto-Light.woff2") format("woff2");
   font-weight: 300;
   font-display: swap;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("/fonts/Roboto-Regular.woff2") format("woff2");
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("/fonts/Roboto-Medium.woff2") format("woff2");
+  src: url("../fonts/Roboto-Medium.woff2") format("woff2");
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
   font-family: "Roboto";
-  src: url("/fonts/Roboto-Bold.woff2") format("woff2");
+  src: url("../fonts/Roboto-Bold.woff2") format("woff2");
   font-weight: 700;
   font-display: swap;
 }
 @font-face {
   font-family: "Proxima Nova";
-  src: url("/fonts/proximanova_regular.woff2") format("woff2");
+  src: url("../fonts/proximanova_regular.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "Proxima Nova";
-  src: url("/fonts/proximanova_bold.woff2") format("woff2");
+  src: url("../fonts/proximanova_bold.woff2") format("woff2");
   font-weight: 700;
   font-display: swap;
 }
@@ -170,7 +170,7 @@ ul {
   }
 }
 .header__burger {
-  background-image: url(/images/menu.svg);
+  background-image: url(../images/menu.svg);
   background-size: contain;
 }
 @media (min-width: 1280px) {
@@ -376,7 +376,7 @@ ul {
   margin-top: 6px;
 }
 .widget-list__link::before {
-  content: url(/images/link.svg);
+  content: url(../images/link.svg);
 }
 .widget-list__error {
   color: #DC3528;
@@ -449,7 +449,7 @@ ul {
   margin: 30px;
 }
 .back::before {
-  content: url(/images/back.svg);
+  content: url(../images/back.svg);
 }
 
 .expand {
@@ -460,7 +460,7 @@ ul {
 }
 .expand--arrow::after {
   display: inline-flex;
-  content: url(/images/down_arrow.svg);
+  content: url(../images/down_arrow.svg);
 }
 .expand--expanded::after {
   rotate: 0.5turn;
@@ -506,10 +506,10 @@ ul {
   background: rgb(201.75, 215.95, 237.25);
 }
 .icon-button--close {
-  background-image: url(/images/close.svg);
+  background-image: url(../images/close.svg);
 }
 .icon-button--nav {
-  background-image: url(/images/down_arrow.svg);
+  background-image: url(../images/down_arrow.svg);
 }
 .icon-button--up {
   rotate: 0.5turn;
@@ -594,7 +594,7 @@ ul {
 }
 .help::after {
   display: flex;
-  content: url(/images/question-circle.svg);
+  content: url(../images/question-circle.svg);
 }
 
 .button-row {
@@ -666,7 +666,7 @@ ul {
   margin: 10px 0;
 }
 .note::before {
-  content: url(/images/attention.svg);
+  content: url(../images/attention.svg);
 }
 
 .end-action {
@@ -732,7 +732,7 @@ ul {
 }
 .button--expand::before {
   display: inline-flex;
-  content: url(/images/presets.svg);
+  content: url(../images/presets.svg);
 }
 
 .color-picker {
@@ -865,7 +865,7 @@ ul {
   position: absolute;
   bottom: 12px;
   right: 12px;
-  background-image: url(/images/copy.svg);
+  background-image: url(../images/copy.svg);
 }
 .copyable--success::after {
   content: "Скопировано!";
@@ -1046,7 +1046,7 @@ ul {
   z-index: 1;
 }
 .multi-options__delete-button::before {
-  content: url(/images/variant-delete.svg);
+  content: url(../images/variant-delete.svg);
   width: 34px;
   height: 34px;
 }
@@ -1084,7 +1084,7 @@ ul {
   z-index: 1;
 }
 .add-variant__button::before {
-  content: url(/images/add.svg);
+  content: url(../images/add.svg);
   width: 35px;
   height: 35px;
 }
@@ -1249,7 +1249,7 @@ ul {
 
 .select {
   appearance: none;
-  background-image: url(/images/down_arrow.svg);
+  background-image: url(../images/down_arrow.svg);
   background-position: right 12px center;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -1420,7 +1420,7 @@ ul {
   cursor: pointer;
 }
 .upload__label::before {
-  content: url(/images/upload2.svg);
+  content: url(../images/upload2.svg);
   height: 16px;
 }
 .upload__preview {
@@ -1442,7 +1442,7 @@ ul {
   flex: 1;
 }
 .upload__delete {
-  background: url(/images/delete.svg) center no-repeat;
+  background: url(../images/delete.svg) center no-repeat;
 }
 
 .upload-video {
@@ -1460,7 +1460,7 @@ ul {
   cursor: pointer;
 }
 .upload-video::before {
-  content: url(/images/upload.svg);
+  content: url(../images/upload.svg);
   margin: auto;
 }
 
@@ -1471,14 +1471,14 @@ ul {
   width: 200px;
   height: 260px;
   border-radius: 30px;
-  background: rgba(0, 0, 0, 0.2) url(/images/video-widget-frame.png) center/cover;
+  background: rgba(0, 0, 0, 0.2) url(../images/video-widget-frame.png) center/cover;
   background-blend-mode: darken;
   padding: 16px;
 }
 .video__play {
   width: 40px;
   height: 40px;
-  background-image: url(/images/play-video.svg);
+  background-image: url(../images/play-video.svg);
   margin: auto;
 }
 
