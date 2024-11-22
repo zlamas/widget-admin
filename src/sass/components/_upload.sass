@@ -1,0 +1,44 @@
+@use "mixins" as *
+
+.upload
+  &__input
+    display: none
+
+  &__format
+    display: block
+    font-size: 12px
+    line-height: 1.8
+    margin-top: 4px
+    opacity: 45%
+
+  &__label
+    @include flex(8px, inline, center)
+    border: 1px solid #D9D9D9
+    border-radius: 6px
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.02)
+    margin-top: 20px
+    padding: 6px 16px
+    cursor: pointer
+
+    &::before
+      content: url(/images/upload2.svg)
+      height: 16px
+
+  &__preview
+    @include flex(8px, inline, center)
+    width: 240px
+    border: 1px solid #D9D9D9
+    border-radius: 8px
+    margin: 12px 0
+    padding: 8px
+
+  &__thumb
+    width: 48px
+    height: 48px
+
+  &__name
+    color: #1890FF
+    flex: 1
+
+  &__delete
+    background: url(/images/delete.svg) center no-repeat

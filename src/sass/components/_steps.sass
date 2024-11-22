@@ -1,0 +1,54 @@
+@use "../mixins" as *
+
+.steps
+  @include flex(16px, column)
+
+  &__wrapper
+    @include flex(15px)
+    justify-content: center
+
+  &__progress
+    height: 8px
+    background: #F5F5F5
+    border-radius: 99em
+
+    &-bar
+      height: 100%
+      background: #1890FF
+      border-radius: inherit
+
+@for $i from 1 through 6
+  .progress--#{$i}
+    width: calc(100% / 6 * $i)
+
+.step
+  @include flex(10px, column)
+
+  @include desktop
+    flex: 1
+
+  @include not-desktop
+    flex-direction: row
+    align-items: center
+
+    &:not(&--current)
+      display: none
+
+  &--current ~ &
+    opacity: 40%
+
+  &__number
+    font-size: 12px
+
+  &__name
+    @include flex(6px, center)
+    flex: 1
+    justify-content: center
+    background: #F4F7FF
+    border-radius: 8px
+    font-size: 15px
+    padding: 20px 10px
+
+  &__icon
+    width: 24px
+    height: 24px

@@ -1,0 +1,26 @@
+@@include('partials/header.html', { title: 'Добавить мультикнопку' })
+
+<main class="main">
+  <h1 class="heading h1">Добавить мультикнопку</h1>
+
+  @@include('partials/steps.html', { step: 6 })
+
+  <section class="section">
+    <h2 class="heading heading__large h2">Поздравляем! Ваш виджет успешно создан!</h2>
+    <div class="description">Удачи в дальнейшей настройке и развитии!</div>
+    <a href="/" class="end-action">
+      <img src="@@webRoot/images/action-1.svg" alt="">
+      <span>Редактировать виджет</span>
+    </a>
+    <a href="/" class="end-action">
+      <img src="@@webRoot/images/action-2.svg" alt="">
+      <span>Добавить еще один виджет</span>
+    </a>
+    <a href="/" class="end-action">
+      <img src="@@webRoot/images/action-3.svg" alt="">
+      <span>Интеграции</span>
+    </a>
+  </section>
+
+  @@include('partials/contact.html')
+</main>

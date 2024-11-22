@@ -1,0 +1,109 @@
+@@include('partials/header.html', { title: 'Добавить видео-виджет' })
+
+
+<main class="main">
+  @@include('partials/help-popup.html')
+  @@include('partials/color-picker.html')
+
+  <h1 class="heading h1">Добавить видео-виджет</h1>
+
+  @@include('partials/steps.html', { step: 2 })
+
+  <div class="row">
+    <section class="section">
+      <div class="section__title heading">
+        <h2 class="h2">Внешний вид</h2>
+        <div class="description">Опции для изменения стилей текста, заголовков, подзаголовков и кнопок виджета в блоке настроек.</div>
+      </div>
+      <div class="section__block">
+        <h3 class="heading h3 help">Заголовок</h3>
+        <input type="text" class="input" placeholder="Введите текст" required>
+
+        <div class="range">
+          <div class="range__tooltip-track">
+            <div class="tooltip tooltip--visible range__tooltip"></div>
+          </div>
+          <input type="range" class="range__input" value="14" min="1" max="60" step="0.5">
+          <span class="range__name">Размер</span>
+        </div>
+
+        <div class="color field">
+          <div class="color__block">
+            <span>Цвет</span>
+            <button class="color__icon color--current picker-open" data-picker=".color-picker" data-color="#E89623"></button>
+            <span class="color__hex">#186658</span>
+          </div>
+          <div class="color__block">
+            <span>Популярные цвета</span>
+            <button class="color__icon" data-color="#FF9B0A"></button>
+            <button class="color__icon" data-color="#66D7C3"></button>
+            <button class="color__icon" data-color="#DC3528"></button>
+            <button class="color__icon" data-color="#E5685E"></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="section__block">
+        <h3 class="heading h3">Подзаголовок</h3>
+        <input type="text" class="input" placeholder="Введите текст">
+
+        <div class="range">
+          <div class="range__tooltip-track">
+            <div class="tooltip tooltip--visible range__tooltip"></div>
+          </div>
+          <input type="range" class="range__input" value="14" min="1" max="60" step="0.5">
+          <span class="range__name">Размер</span>
+        </div>
+
+        <div class="color field">
+          <div class="color__block">
+            <span>Цвет</span>
+            <button class="color__icon color--current picker-open" data-picker=".color-picker" data-color="#658DF9"></button>
+            <span class="color__hex">#186658</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section__block">
+        <h3 class="heading h3">
+          <label class="switch-row">
+            <span>Кнопка виджета</span>
+            <input type="checkbox" class="switch-input expand expand--expanded" data-collapse="#widget-button" checked>
+            <span class="switch"></span>
+          </label>
+        </h3>
+        <div id="widget-button">
+          <input type="text" class="input" placeholder="Введите текст">
+
+          <div class="range">
+            <div class="range__tooltip-track">
+              <div class="tooltip tooltip--visible range__tooltip"></div>
+            </div>
+            <input type="range" class="range__input" value="14" min="1" max="60" step="0.5">
+            <span class="range__name">Закругление</span>
+          </div>
+
+          <div class="color field">
+            <div class="color__block">
+              <span>Цвет</span>
+              <button class="color__icon color--current picker-open" data-picker=".color-picker" data-color="#DC3528"></button>
+              <span class="color__hex">#186658</span>
+            </div>
+          </div>
+
+          <label class="field">
+            <span class="field__title">Куда ведет ссылка</span>
+            <input type="text" class="input">
+          </label>
+        </div>
+      </div>
+
+      <div class="button-row">
+        <a class="button button--primary" href="3.html">Сохранить</a>
+        <a class="button" href="/">Отмена</a>
+      </div>
+    </section>
+
+    @@include('partials/widget-preview.html', { type: 'video' })
+  </div>
+</main>

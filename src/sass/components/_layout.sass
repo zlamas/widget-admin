@@ -1,0 +1,53 @@
+@use "../mixins" as *
+
+.profile
+  @include desktop
+    display: grid
+    grid-template-areas: "sidebar header" "sidebar main"
+    grid-template-columns: 270px auto
+    grid-template-rows: 80px auto
+
+.sidebar
+  grid-area: sidebar
+
+.header
+  grid-area: header
+
+.main
+  grid-area: main
+  background: #FAFBFE
+  padding: 24px
+  font-size: 14px
+
+  @include desktop
+    padding-right: 50px
+
+.section
+  position: relative
+  background: white
+  border-radius: 8px
+  box-shadow: 0 0 23px rgba(231, 232, 235, 0.25)
+  margin-bottom: 40px
+  padding: 25px
+
+  @include mobile
+    padding: 25px 20px
+
+  &__title
+    @include flex(8px 12px, wrap)
+    align-items: baseline
+
+  &__block
+    padding: 18px 0
+
+    & + &
+      border-top: 1px solid #EAEAEA
+
+  &__row
+    margin-top: 20px
+
+.row
+  @include desktop
+    display: grid
+    gap: 40px
+    grid-template-columns: 1fr 1fr

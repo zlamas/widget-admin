@@ -1,0 +1,96 @@
+@use "../mixins" as *
+
+@mixin color-picker-marker
+  position: relative
+  width: 32px
+  height: 32px
+  box-sizing: border-box
+  appearance: none
+  background: hsl(var(--hue) 100% 50%)
+  border: 8px solid white
+  border-radius: 50%
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset
+  outline: 1px solid rgba(0, 0, 0, 0.1)
+  outline-offset: -1px
+  cursor: pointer
+
+.color-picker
+  --base-offset: 50%
+  --pointer-offset: 36px
+  --sat-percent: calc(var(--sat) * 100%)
+  --val-percent: calc(var(--val) * 100%)
+  bottom: 180%
+  width: 352px
+  font-family: "Proxima Nova", sans-serif
+
+  &__area
+    position: relative
+    height: 238px
+    border-radius: 8px
+    background: linear-gradient(to bottom, transparent, black), linear-gradient(to right, white, transparent), hsl(var(--hue) 100% 50%)
+    cursor: pointer
+    outline: 1px solid rgba(0, 0, 0, 0.1)
+    outline-offset: -1px
+
+  &__marker
+    @include color-picker-marker
+    left: var(--sat-percent)
+    top: calc(100% - var(--val-percent))
+    background: var(--color)
+    pointer-events: none
+    translate: -50% -50%
+
+  &__input
+    display: block
+    width: 100%
+
+  &__hue
+    height: 12px
+    appearance: none
+    background: linear-gradient(to right in hsl longer hue, red, red)
+    border: 1px solid rgba(0, 0, 0, 0.1)
+    border-radius: 99em
+    margin: 16px 0
+
+    &::-webkit-slider-thumb
+      @include color-picker-marker
+
+    &::-moz-range-thumb
+      @include color-picker-marker
+
+  &__values
+    @include flex(8px)
+    text-indent: 4px
+
+  &__value
+    font-size: 12px
+    font-weight: 700
+
+  &__field
+    min-width: 64px
+    border: 1px solid #E5E8E8
+    border-radius: 8px
+    font-family: inherit
+    font-size: 16px
+    margin-top: 8px
+    padding: 8px 16px
+
+    @include mobile
+      min-width: 48px
+      padding: 8px
+
+.color
+  @include flex(10px, wrap)
+
+  &--current
+    background: var(--color)
+
+  &__block
+    @include flex(5px, center)
+
+  &__icon
+    position: relative
+    min-width: 25px
+    min-height: 25px
+    border-radius: 50%
+    cursor: pointer

@@ -1,0 +1,17 @@
+.copyable
+  position: relative
+
+  &__button
+    position: absolute
+    bottom: 12px
+    right: 12px
+    background-image: url(/images/copy.svg)
+
+  &--success
+    &::after
+      content: 'Скопировано!'
+      position: absolute
+      top: 100%
+      right: 0
+      color: #4CAF50
+      padding: 6px

@@ -1,0 +1,180 @@
+@use "../mixins" as *
+
+.multibutton
+  @include flex(6px, column)
+  align-items: flex-end
+
+  &__icon
+    width: 60px
+    height: 60px
+
+    &--variant
+      width: 30px
+      height: 30px
+
+  &__row
+    @include flex(10px, center)
+    border-radius: 6px
+    padding: 2px 5px
+
+  &__label
+    background: #616476
+    border-radius: 99em
+    color: white
+    font-size: 10px
+    line-height: 1
+    padding: 6px 12px
+    white-space: nowrap
+
+.multi-presets
+  @include flex(10px, wrap)
+
+  &--scrollable
+    max-height: 420px
+    overflow: auto
+    padding: 1px
+
+.multi-preset
+  position: relative
+  background: #FAFAFA
+  border-radius: 12px
+  padding: 10px 6px
+  font-size: 12px
+  counter-increment: preset
+  cursor: pointer
+
+  &::before
+    content: 'Шаблон ' counter(preset)
+    align-self: flex-start
+
+  &--selected
+    outline: 1px solid #4CAF50
+
+  &__controls
+    @include flex(18px, center)
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    background: linear-gradient(rgba(255, 155, 10, 0.22), rgba(14, 12, 9, 0.22))
+    border-radius: 12px
+    padding: 20px
+    visibility: hidden
+
+    .multi-preset:hover &
+      visibility: visible
+
+.variant-list
+  @include flex(5px)
+
+  &__nav
+    @include flex(0, column)
+    justify-content: space-between
+
+  &__content
+    @include flex(7px, column)
+
+  &__item
+    @include flex(5px, center, wrap)
+
+    &--selected
+      .multibutton__row
+        background: rgba(76, 175, 80, 0.1)
+
+.multi-options
+  display: grid
+  gap: 36px
+  grid-template-columns: auto 34px
+  margin-top: 20px
+
+  @include mobile
+    gap: 10px
+
+  &__row
+    display: grid
+    gap: 20px
+    grid-template-columns: 1fr 1fr
+    margin-top: 20px
+
+    @include mobile
+      grid-template-columns: auto
+
+  &__delete
+    @include flex(16px, center, column)
+    margin-bottom: 45px
+
+    &::before
+      content: ''
+      flex: 1
+      border-left: 1px dashed #B7B7B7
+
+    &-button
+      @include flex
+      cursor: pointer
+      z-index: 1
+
+      &::before
+        content: url(/images/variant-delete.svg)
+        width: 34px
+        height: 34px
+
+.icon-add
+  @include flex(10px, center)
+  position: relative
+  font-size: 12px
+  cursor: pointer
+
+.add-variant
+  @include flex(0, center)
+
+  &::before
+    content: ''
+    display: block
+    position: absolute
+    left: 0
+    right: 0
+    border-top: 1px dashed rgba(24, 144, 255, 0.6)
+
+  &__button
+    @include flex(16px, center)
+    background: white
+    font-size: 16px
+    font-weight: 500
+    padding: 15px
+    cursor: pointer
+    z-index: 1
+
+    &::before
+      content: url(/images/add.svg)
+      width: 35px
+      height: 35px
+
+.icon-picker
+  --base-offset: 25px
+  --pointer-offset: 25px
+  bottom: 130%
+  width: 352px
+  padding: 25px
+
+  &__icons
+    @include flex(12px 8px, wrap)
+
+  &__icon
+    width: 30px
+    height: 30px
+    cursor: pointer
+
+.upload-picker
+  top: 110%
+  width: 300px
+
+  &::after
+    display: none
+
+  &__close
+    position: absolute
+    top: 16px
+    right: 16px
+
+  &__title
+    @include flex(8px, center)

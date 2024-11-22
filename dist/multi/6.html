@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Кабинет</title>
+<link rel="stylesheet" href="../css/main.css">
+<script defer src="../js/main.js"></script>
+
+<body class="profile">
+<nav class="sidebar">
+  <div class="sidebar__top">
+    <a href="/">
+      <img class="sidebar__logo" src="../images/logo.svg" alt="">
+    </a>
+    <button class="icon-button icon-button--close sidebar__close"></button>
+  </div>
+
+  <ul class="sidebar__list">
+    <li>
+      <a href="/" class="sidebar__item">
+        <img class="sidebar__icon" src="../images/widgets.svg" alt="">
+        <span>Виджеты</span>
+      </a>
+    </li>
+    <li>
+      <ul class="sidebar__list sidebar__sublist">
+        <li>
+          <a href="/multi/1.html" class="sidebar__item">
+            <img class="sidebar__icon" src="../images/multi.svg" alt="">
+            <span>Мультикнопка</span>
+          </a>
+        </li>
+        <li>
+          <a href="/video/1.html" class="sidebar__item">
+            <img class="sidebar__icon" src="../images/play.svg" alt="">
+            <span>Видео-виджет</span>
+          </a>
+        </li>
+        <li>
+          <a href="/" class="sidebar__item">
+            <img class="sidebar__icon" src="../images/call.svg" alt="">
+            <span>Обратный звонок</span>
+          </a>
+        </li>
+        <li>
+          <a href="/" class="sidebar__item">
+            <img class="sidebar__icon" src="../images/chat.svg" alt="">
+            <span>Онлайн-чат</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul class="sidebar__list">
+    <li>
+      <div class="sidebar__item expand expand--arrow expand--expanded" data-collapse="#block1">
+        <img class="sidebar__icon" src="../images/settings.svg" alt="">
+        <span>Управление</span>
+      </div>
+      <ul id="block1" class="sidebar__list sidebar__sublist sidebar__block">
+        <li>
+          <a href="/" class="sidebar__item">
+            <img class="sidebar__icon" src="../images/profile.svg" alt="">
+            <span>Профиль</span>
+          </a>
+        </li>
+        <li>
+          <a href="/presets.html" class="sidebar__item">
+            <img class="sidebar__icon" src="../images/puzzle.svg" alt="">
+            <span>Пресеты</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="sidebar__bottom">
+    <div class="socials">
+      <a class="socials__link icon-button--fill" href="/">
+        <img width="20" height="20" src="../images/telegram.svg" alt="">
+      </a>
+      <a class="socials__link icon-button--fill" href="/">
+        <img width="20" height="20" src="../images/whatsapp.svg" alt="">
+      </a>
+      <a class="socials__link icon-button--fill" href="/">
+        <img width="20" height="20" src="../images/vk.svg" alt="">
+      </a>
+    </div>
+    <a class="support" href="/">
+      <img class="sidebar__icon" src="../images/info.svg" alt="">
+      <span>Справка и поддержка</span>
+    </a>
+    <div>Email: <a class="link" href="mailto:info@gvozd.info">info@gvozd.info</a></div>
+  </div>
+</nav>
+
+<header class="header">
+  <button class="icon-button header__burger"></button>
+
+  <nav class="breadcrumb header__breadcrumb">
+    <ul class="breadcrumb__list">
+      <li class="breadcrumb__item"><a class="link" href="/">Главная</a></li>
+      <li class="breadcrumb__item"><a class="link" href="/">Кабинет</a></li>
+
+      <li class="breadcrumb__item">Добавить мультикнопку</li>
+
+    </ul>
+  </nav>
+
+  <a href="/" class="header__block header__block--tariff">
+    <img width="24" height="24" src="../images/favorite.svg" alt="">
+    <div>
+      <div class="header__text--top">Ваш тариф</div>
+      <div class="header__text--bottom">Продвинутый</div>
+    </div>
+    <div class="tooltip header__tooltip">до 23 февраля 2024 г.</div>
+  </a>
+  <div class="separator separator--vertical"></div>
+
+  <a href="/" class="header__block header__block--user">
+    <div>
+      <div class="header__text--top">Добро пожаловать</div>
+      <div class="header__text--bottom">Валентин Колесов</div>
+    </div>
+    <img width="20" height="20" src="../images/down_btn.svg" alt="">
+  </a>
+</header>
+
+
+<main class="main">
+  <h1 class="heading h1">Добавить мультикнопку</h1>
+
+  <div class="section steps">
+  <div class="steps__wrapper">
+    <div class="step ">
+      <span class="step__number">Шаг 1</span>
+      <div class="step__name">
+        <img class="step__icon" src="/images/step-1.svg" alt="">
+        <span>Общие настройки</span>
+      </div>
+    </div>
+    <div class="step ">
+      <span class="step__number">Шаг 2</span>
+      <div class="step__name">
+        <img class="step__icon" src="/images/step-2.svg" alt="">
+        <span>Внешний вид</span>
+      </div>
+    </div>
+    <div class="step ">
+      <span class="step__number">Шаг 3</span>
+      <div class="step__name">
+        <img class="step__icon" src="/images/step-3.svg" alt="">
+        <span>Расположение</span>
+      </div>
+    </div>
+    <div class="step ">
+      <span class="step__number">Шаг 4</span>
+      <div class="step__name">
+        <img class="step__icon" src="/images/step-4.svg" alt="">
+        <span>Дополнительно</span>
+      </div>
+    </div>
+    <div class="step ">
+      <span class="step__number">Шаг 5</span>
+      <div class="step__name">
+        <img class="step__icon" src="/images/step-5.svg" alt="">
+        <span>Код виджета</span>
+      </div>
+    </div>
+    <div class="step  step--current ">
+      <span class="step__number">Шаг 6</span>
+      <div class="step__name">
+        <img class="step__icon" src="/images/step-6.svg" alt="">
+        <span>Готово к работе</span>
+      </div>
+    </div>
+  </div>
+  <div class="steps__progress">
+    <div class="steps__progress-bar progress--6"></div>
+  </div>
+</div>
+
+
+  <section class="section">
+    <h2 class="heading heading__large h2">Поздравляем! Ваш виджет успешно создан!</h2>
+    <div class="description">Удачи в дальнейшей настройке и развитии!</div>
+    <a href="/" class="end-action">
+      <img src="../images/action-1.svg" alt="">
+      <span>Редактировать виджет</span>
+    </a>
+    <a href="/" class="end-action">
+      <img src="../images/action-2.svg" alt="">
+      <span>Добавить еще один виджет</span>
+    </a>
+    <a href="/" class="end-action">
+      <img src="../images/action-3.svg" alt="">
+      <span>Интеграции</span>
+    </a>
+  </section>
+
+  <div class="contact">
+  <div class="tooltip tooltip--visible tooltip--relative contact__tooltip">Связаться с техподдержкой</div>
+  <a href="/" class="icon-button--fill">
+    <img width="40" height="40" src="../images/whatsapp-fill.svg" alt="">
+  </a>
+</div>
+
+</main>

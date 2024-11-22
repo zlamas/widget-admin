@@ -1,0 +1,52 @@
+@@include('partials/header.html', { title: 'Добавить мультикнопку' })
+
+<main class="main">
+  <h1 class="heading h1">Добавить мультикнопку</h1>
+
+  @@include('partials/steps.html', { step: 4 })
+
+  <a href="3.html" class="back">Вернуться в расположение</a>
+
+  <div class="row">
+    <section class="section">
+      <div class="section__title heading">
+        <h2 class="h2">Дополнительные опции виджета</h2>
+        <div class="description">Введите ссылки для указания отображения виджета на вашем сайте</div>
+      </div>
+
+      <div class="field">
+        <h3 class="heading h3">Показывать на страницах:</h3>
+        <textarea class="input textarea" rows="4"></textarea>
+      </div>
+
+      <div class="field">
+        <h3 class="heading h3">Скрывать на страницах:</h3>
+        <textarea class="input textarea" rows="4"></textarea>
+      </div>
+
+      <h3 class="heading h3">Настройки отображения</h3>
+      <label class="field switch-row">
+        <span class="switch-row__label">Скрывать на ПК</span>
+        <input type="checkbox" class="switch-input">
+        <span class="switch"></span>
+      </label>
+      <label class="field switch-row">
+        <span class="switch-row__label">Скрывать на планшетах</span>
+        <input type="checkbox" class="switch-input">
+        <span class="switch"></span>
+      </label>
+      <label class="field switch-row">
+        <span class="switch-row__label">Скрывать на телефонах</span>
+        <input type="checkbox" class="switch-input" checked>
+        <span class="switch"></span>
+      </label>
+
+      <div class="button-row">
+        <a class="button button--primary" href="5.html">Сохранить</a>
+        <a class="button" href="/">Отмена</a>
+      </div>
+    </section>
+
+    @@include('partials/widget-preview.html', { type: 'multi' })
+  </div>
+</main>

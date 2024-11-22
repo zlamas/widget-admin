@@ -1,0 +1,41 @@
+@@include('partials/header.html', { title: 'Добавить видео-виджет' })
+
+<main class="main">
+  <h1 class="heading h1">Добавить видео-виджет</h1>
+
+  @@include('partials/steps.html', { step: 1 })
+
+  <section class="section">
+    <h2 class="heading h2">Общие настройки</h2>
+
+    <div class="field required">
+      <label for="widget-title" class="field__title">Укажите понятное для вас название виджета</label>
+      <div class="field__row">
+        <input type="text" class="input" id="widget-title" value="Тестовый виджет" required>
+        <div class="description">Название виджета помогает идентифицировать его и дает посетителям понятие о том, какую функцию или информацию этот виджет предоставляет.</div>
+      </div>
+    </div>
+
+    <div class="field required">
+      <label for="widget-address" class="field__title">Адрес сайта</label>
+      <div class="field__row">
+        <input type="text" class="input" id="widget-address" value="google.com" required>
+        <div class="description">Адрес сайта (или URL) — это строка текста, которая указывает путь к вашему веб-сайту.<br>Примером URL может быть: https://www.example.com.</div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="widget-type" class="field__title">Тип виджета</label>
+      <div class="field__row">
+        <input type="text" class="input" id="widget-type" value="Видео виджет" disabled>
+        <div class="description">При настройке страницы сайта вам нужно будет выбрать, какой тип виджета вы хотите добавить</div>
+      </div>
+    </div>
+
+    <div class="button-row">
+      <a class="button button--primary" href="2.html">Сохранить и продолжить</a>
+    </div>
+  </section>
+
+  @@include('partials/contact.html')
+</main>

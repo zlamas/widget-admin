@@ -1,0 +1,359 @@
+@@include('partials/header.html', { title: 'Добавить мультикнопку' })
+
+<main class="main">
+  @@include('partials/help-popup.html')
+  @@include('partials/color-picker.html')
+
+  <div class="picker icon-picker">
+    <h2 class="heading h2">Подберите нужную иконку</h2>
+    <div class="icon-picker__icons">
+      <img src="/images/multi-icon-1.svg" alt="" class="icon-picker__icon">
+      <img src="/images/multi-icon-2.svg" alt="" class="icon-picker__icon">
+      <img src="/images/multi-icon-3.svg" alt="" class="icon-picker__icon">
+      <img src="/images/multi-icon-4.svg" alt="" class="icon-picker__icon">
+      <img src="/images/multi-icon-4.svg" alt="" class="icon-picker__icon">
+      <img src="/images/multi-icon-3.svg" alt="" class="icon-picker__icon">
+      <img src="/images/multi-icon-2.svg" alt="" class="icon-picker__icon">
+      <img src="/images/multi-icon-1.svg" alt="" class="icon-picker__icon">
+      <img src="/images/multi-icon-1.svg" alt="" class="icon-picker__icon">
+      <img src="/images/multi-icon-2.svg" alt="" class="icon-picker__icon">
+      <img src="/images/multi-icon-3.svg" alt="" class="icon-picker__icon">
+      <img src="/images/multi-icon-4.svg" alt="" class="icon-picker__icon">
+      <img src="/images/multi-icon-4.svg" alt="" class="icon-picker__icon">
+      <img src="/images/multi-icon-3.svg" alt="" class="icon-picker__icon">
+      <img src="/images/multi-icon-2.svg" alt="" class="icon-picker__icon">
+      <img src="/images/multi-icon-1.svg" alt="" class="icon-picker__icon">
+    </div>
+  </div>
+
+  <div class="picker upload-picker">
+    <div class="upload-picker__title">
+      <button class="icon-button icon-button--close upload-picker__close"></button>
+      <div class="icon-button--fill">
+        <img width="30" height="30" src="/images/add.svg" alt="">
+      </div>
+      <h2 class="h2">Загрузка иконки</h2>
+    </div>
+    <label for="upload-icon" class="upload__label">Загрузить</label>
+    <span class="upload__format">
+      Формат файла - jpg, jpeg, png, webp
+      <br>Размер - 215x355 | &lt; 1Mb
+    </span>
+    <div class="upload__preview">
+      <input type="file" id="upload-icon" class="upload__input" accept=".jpg, .jpeg, .png, .webp">
+      <img class="upload__thumb" src="/images/icon-preview.png" alt="">
+      <span class="upload__name">xxx.png</span>
+      <button class="icon-button upload__delete delete"></button>
+    </div>
+    <button class="section__row button button--primary">Сохранить</button>
+  </div>
+
+  <h1 class="heading h1">Добавить мультикнопку</h1>
+
+  @@include('partials/steps.html', { step: 2 })
+
+  <div class="row">
+    <div>
+      <section class="section">
+        <div class="section__title heading">
+          <h2 class="h2">Внешний вид</h2>
+          <div class="description">Выберите готовый вариант использя шаблоны или создайте виджет мультикнопки с нуля</div>
+        </div>
+
+        <div class="button-row">
+          <button class="button expand expand--arrow button--expand" data-collapse="#multi-presets">Шаблоны</button>
+          <button class="button button--green">Создать кнопку</button>
+        </div>
+
+        <div class="section__row hidden" id="multi-presets">
+          <div class="multi-presets multi-presets--scrollable">
+            <div class="multi-preset multibutton">
+              <div class="multibutton__row">
+                <div class="multibutton__label">Перезвоним через 24 секунды</div>
+                <img class="multibutton__icon--variant" src="@@webRoot/images/multi-icon-1.svg" alt="">
+              </div>
+              <div class="multibutton__row">
+                <div class="multibutton__label">Напишите нам в ВК</div>
+                <img class="multibutton__icon--variant" src="@@webRoot/images/multi-icon-4.svg" alt="">
+              </div>
+              <div class="multibutton__row">
+                <div class="multibutton__label">Для связи в Телеграм</div>
+                <img class="multibutton__icon--variant" src="@@webRoot/images/multi-icon-3.svg" alt="">
+              </div>
+              <img class="multibutton__icon" src="@@webRoot/images/multi-icon-large-1.svg" alt="">
+            </div>
+            <div class="multi-preset multibutton multi-preset--selected">
+              <div class="multibutton__row">
+                <div class="multibutton__label">Перезвоним через 24 секунды</div>
+                <img class="multibutton__icon--variant" src="@@webRoot/images/multi-icon-1.svg" alt="">
+              </div>
+              <div class="multibutton__row">
+                <div class="multibutton__label">Уже звоним Вам</div>
+                <img class="multibutton__icon--variant" src="@@webRoot/images/multi-icon-2.svg" alt="">
+              </div>
+              <div class="multibutton__row">
+                <div class="multibutton__label">Для связи в Телеграм</div>
+                <img class="multibutton__icon--variant" src="@@webRoot/images/multi-icon-3.svg" alt="">
+              </div>
+              <img class="multibutton__icon" src="@@webRoot/images/multi-icon-large-2.svg" alt="">
+            </div>
+            <div class="multi-preset multibutton">
+              <div class="multibutton__row">
+                <div class="multibutton__label">Перезвоним через 24 секунды</div>
+                <img class="multibutton__icon--variant" src="@@webRoot/images/multi-icon-1.svg" alt="">
+              </div>
+              <div class="multibutton__row">
+                <div class="multibutton__label">Напишите нам в ВК</div>
+                <img class="multibutton__icon--variant" src="@@webRoot/images/multi-icon-4.svg" alt="">
+              </div>
+              <img class="multibutton__icon" src="@@webRoot/images/multi-icon-large-3.svg" alt="">
+            </div>
+            <div class="multi-preset multibutton">
+              <div class="multibutton__row">
+                <div class="multibutton__label">Перезвоним через 24 секунды</div>
+                <img class="multibutton__icon--variant" src="@@webRoot/images/multi-icon-1.svg" alt="">
+              </div>
+              <img class="multibutton__icon" src="@@webRoot/images/multi-icon-large-4.svg" alt="">
+            </div>
+            <div class="multi-preset multibutton">
+              <div class="multibutton__row">
+                <div class="multibutton__label">Перезвоним через 24 секунды</div>
+                <img class="multibutton__icon--variant" src="@@webRoot/images/multi-icon-1.svg" alt="">
+              </div>
+              <div class="multibutton__row">
+                <div class="multibutton__label">Напишите нам в ВК</div>
+                <img class="multibutton__icon--variant" src="@@webRoot/images/multi-icon-4.svg" alt="">
+              </div>
+              <img class="multibutton__icon" src="@@webRoot/images/multi-icon-large-3.svg" alt="">
+            </div>
+            <div class="multi-preset multibutton">
+              <div class="multibutton__row">
+                <div class="multibutton__label">Перезвоним через 24 секунды</div>
+                <img class="multibutton__icon--variant" src="@@webRoot/images/multi-icon-1.svg" alt="">
+              </div>
+              <img class="multibutton__icon" src="@@webRoot/images/multi-icon-large-4.svg" alt="">
+            </div>
+          </div>
+          <div class="section__row">
+            <button class="button button--green">Выбрать шаблон</button>
+          </div>
+        </div>
+
+        <div class="variant-list section__row">
+          <div class="variant-list__nav">
+            <button class="icon-button icon-button--nav icon-button--up"></button>
+            <button class="icon-button icon-button--nav icon-button--down"></button>
+          </div>
+          <div class="variant-list__content">
+            <div class="variant-list__item variant-list__item--selected">
+              <div class="multibutton__row">
+                <img class="multibutton__icon--variant" src="../images/multi-icon-1.svg" alt="">
+                <div class="multibutton__label">Перезвоним через 24 секунды</div>
+              </div>
+              <div class="widget-controls widget-controls--small">
+                <button class="widget-controls__button delete">
+                  <img src="@@webRoot/images/widget-delete.svg" alt="">
+                </button>
+                <a href="#multi-variant-options" class="widget-controls__button edit-variant">
+                  <img src="@@webRoot/images/widget-edit.svg" alt="">
+                </a>
+              </div>
+
+            </div>
+            <div class="variant-list__item">
+              <div class="multibutton__row">
+                <img class="multibutton__icon--variant" src="../images/multi-icon-1a.svg" alt="">
+                <div class="multibutton__label">Текст для примера</div>
+              </div>
+              <div class="widget-controls widget-controls--small">
+                <button class="widget-controls__button delete">
+                  <img src="@@webRoot/images/widget-delete.svg" alt="">
+                </button>
+                <a href="#multi-variant-options" class="widget-controls__button edit-variant">
+                  <img src="@@webRoot/images/widget-edit.svg" alt="">
+                </a>
+              </div>
+
+            </div>
+            <div class="variant-list__item">
+              <div class="multibutton__row">
+                <img class="multibutton__icon--variant" src="../images/multi-icon-1b.svg" alt="">
+                <div class="multibutton__label">Срочно</div>
+              </div>
+              <div class="widget-controls widget-controls--small">
+                <button class="widget-controls__button delete">
+                  <img src="@@webRoot/images/widget-delete.svg" alt="">
+                </button>
+                <a href="#multi-variant-options" class="widget-controls__button edit-variant">
+                  <img src="@@webRoot/images/widget-edit.svg" alt="">
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="multibutton-controls widget-controls section__row">
+          <img class="multibutton__icon" src="@@webRoot/images/multi-icon-large-1.svg" alt="">
+          <button class="widget-controls__button delete">
+            <img src="@@webRoot/images/widget-delete.svg" alt="">
+
+          </button>
+          <button class="widget-controls__button hidden expand" data-collapse="#multi-icon-options, .multibutton-controls .hidden">
+            <img src="@@webRoot/images/widget-edit.svg" alt="">
+          </button>
+        </div>
+
+        <div class="multi-options" id="multi-icon-options">
+          <div class="multi-options__content">
+            <h3 class="heading h3">Иконка</h3>
+
+            <div class="multi-options__row">
+              <div class="icon-add icon-add--preset picker-open" data-picker=".icon-picker">
+                <button class="icon-button--fill">
+                  <img width="30" height="30" src="/images/whatsapp-fill.svg" alt="">
+                </button>
+                <span>Нажмите и подберите нужную иконку</span>
+              </div>
+              <div class="icon-add icon-add--custom picker-open" data-picker=".upload-picker">
+                <button class="icon-button--fill">
+                  <img width="30" height="30" src="/images/add.svg" alt="">
+                </button>
+                <span>Или загрузите свою индивидуальную</span>
+              </div>
+            </div>
+
+            <div class="color section__row">
+              <div class="color__block">
+                <span>Цвет иконки</span>
+                <button class="color__icon color--current picker-open" data-picker=".color-picker" data-color="#0081E6"></button>
+                <span class="color__hex">#186658</span>
+              </div>
+            </div>
+
+            <div class="range">
+              <div class="range__tooltip-track">
+                <div class="tooltip tooltip--visible range__tooltip"></div>
+              </div>
+              <input type="range" class="range__input" value="14" min="1" max="60" step="0.5">
+              <span class="range__name">Размер</span>
+            </div>
+
+            <div class="multi-options__row">
+              <label>
+                <span class="field__title">Ширина</span>
+                <input type="number" class="input input--number" value="25">
+              </label>
+              <label>
+                <span class="field__title">Высота</span>
+                <input type="number" class="input input--number" value="25" disabled>
+              </label>
+            </div>
+
+            <label class="field">
+              <span class="field__title">Сылка для перехода по кнопке</span>
+              <input type="text" class="input" placeholder="Введите ссылку">
+            </label>
+
+            <label class="field">
+              <span class="field__title">Текст кнопки</span>
+              <input type="text" class="input" placeholder="Введите текст">
+            </label>
+
+            <div class="color section__row">
+              <div class="color__block">
+                <span>Цвет текста</span>
+                <button class="color__icon color--current picker-open" data-picker=".color-picker" data-color="#9BABC5"></button>
+                <span class="color__hex">#186658</span>
+              </div>
+            </div>
+
+            <div class="section__row">
+              <button class="button button--primary expand" data-collapse="#multi-icon-options, .multibutton-controls .hidden">Сохранить</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section__title heading">
+          <h2 class="h2">Добавление варианта</h2>
+          <div class="description">Теперь, когда основная мультикнопка создана, вы можете расширить её функциональность, добавив несколько вариантов кнопок.</div>
+        </div>
+
+        <div class="multi-options" id="multi-variant-options">
+          <div class="multi-options__content">
+            <h3 class="heading h3">Иконка</h3>
+
+            <div class="multi-options__row">
+              <div class="icon-add icon-add--preset picker-open" data-picker=".icon-picker">
+                <button class="icon-button--fill">
+                  <img width="30" height="30" src="/images/whatsapp-fill.svg" alt="">
+                </button>
+                <span>Нажмите и подберите нужную иконку</span>
+              </div>
+              <div class="icon-add icon-add--custom picker-open" data-picker=".upload-picker">
+                <button class="icon-button--fill">
+                  <img width="30" height="30" src="/images/add.svg" alt="">
+                </button>
+                <span>Или загрузите свою индивидуальную</span>
+              </div>
+            </div>
+
+            <div class="color section__row">
+              <div class="color__block">
+                <span>Цвет иконки</span>
+                <button class="color__icon color--current picker-open" data-picker=".color-picker" data-color="#0081E6"></button>
+                <span class="color__hex">#186658</span>
+              </div>
+            </div>
+
+            <div class="multi-options__row">
+              <label>
+                <span class="field__title">Ширина</span>
+                <input type="number" class="input input--number" value="25" disabled>
+              </label>
+              <label>
+                <span class="field__title">Высота</span>
+                <input type="number" class="input input--number" value="25" disabled>
+              </label>
+            </div>
+
+            <label class="field">
+              <span class="field__title">Сылка для перехода по кнопке</span>
+              <input type="text" class="input" placeholder="Введите ссылку">
+            </label>
+
+            <label class="field">
+              <span class="field__title">Текст кнопки</span>
+              <input type="text" class="input" placeholder="Введите текст">
+            </label>
+
+            <div class="color section__row">
+              <div class="color__block">
+                <span>Цвет текста</span>
+                <button class="color__icon color--current picker-open" data-picker=".color-picker" data-color="#9BABC5"></button>
+                <span class="color__hex">#186658</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="multi-options__delete">
+            <button class="multi-options__delete-button expand" data-collapse="#multi-variant-options"></button>
+          </div>
+        </div>
+
+        <div class="add-variant section__row">
+          <button class="add-variant__button">Добавить вариант</button>
+        </div>
+
+        <div class="button-row">
+          <a class="button button--primary" href="3.html">Сохранить</a>
+          <a class="button" href="/">Отмена</a>
+        </div>
+      </section>
+    </div>
+
+    @@include('partials/widget-preview.html', { type: 'multi' })
+  </div>
+</main>

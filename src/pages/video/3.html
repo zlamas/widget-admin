@@ -1,0 +1,115 @@
+@@include('partials/header.html', { title: 'Добавить видео-виджет' })
+
+<main class="main">
+  @@include('partials/help-popup.html')
+  @@include('partials/color-picker.html')
+
+  <h1 class="heading h1">Добавить видео-виджет</h1>
+
+  @@include('partials/steps.html', { step: 3 })
+
+  <a href="2.html" class="back">Вернуться к внешнему виду</a>
+
+  <div class="row">
+    <section class="section">
+      <h3 class="heading h3">Загрузите видео контент</h3>
+      <input type="file" id="upload-video" class="upload__input" accept=".mp4, .avi, .mov">
+      <label class="upload-video" for="upload-video">
+        <span>Перенесите файл или кликните чтобы добавить</span>
+        <span class="upload__format">
+          Формат видео файла
+          <br>mp4, avi, mov
+          <br>215x355 | &lt; 10Mb
+        </span>
+      </label>
+
+      <div class="video hidden">
+        <button class="icon-button video__play"></button>
+        <div class="widget-controls">
+          <button class="widget-controls__button delete">
+            <img src="@@webRoot/images/widget-delete.svg" alt="">
+
+          </button>
+          <label for="upload-video" class="widget-controls__button">
+            <img src="@@webRoot/images/widget-edit.svg" alt="">
+          </label>
+        </div>
+      </div>
+
+      <div class="field help">
+        <label class="switch-row">
+          <input type="checkbox" class="switch-input expand expand--expanded" data-collapse="#video-preview-block" checked>
+          <span class="switch"></span>
+          <span class="switch-row__label">Добавить превью</span>
+        </label>
+      </div>
+      <div class="description">Загрузите превью, оно будет отображаться в виджете до момента, пока клиент не нажмет на видео.</div>
+
+      <div id="video-preview-block">
+        <label for="upload-preview" class="upload__label">Загрузите превью</label>
+        <span class="upload__format">
+          Формат файла - jpg, jpeg, png, webp
+          <br>Размер - 215x355 | &lt; 1Mb
+        </span>
+        <div class="upload__preview">
+          <input type="file" id="upload-preview" class="upload__input" accept=".jpg, .jpeg, .png, .webp">
+          <img class="upload__thumb" src="@@webRoot/images/video-preview-thumb.png" alt="">
+          <span class="upload__name">xxx.png</span>
+          <button class="icon-button upload__delete delete"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h3 class="heading h3">Отображение</h3>
+      <div class="field">
+        <label class="switch-row">
+          <span class="switch-row__label">Убрать логотип WebYm</span>
+          <input type="checkbox" class="switch-input">
+          <span class="switch"></span>
+        </label>
+      </div>
+
+      <div class="color field">
+        <div class="color__block">
+          <span>Цвет обводки видео</span>
+          <button class="color__icon color--current picker-open" data-picker=".color-picker" data-color="#186658"></button>
+          <span class="color__hex">#186658</span>
+        </div>
+      </div>
+
+      <div class="field radio-toggle">
+        <h4 class="heading">Отображение виджета</h4>
+        <label class="option">
+          <input type="radio" class="option__input" name="widget-display" checked>
+          <span>Сразу</span>
+        </label>
+
+        <label class="option">
+          <input type="radio" class="option__input" name="widget-display" data-toggle="#widget-display-2">
+          <span>Через время</span>
+        </label>
+        <label class="field field--small hidden" id="widget-display-2">
+            <span class="field__title">Время до открытия</span>
+            <input type="number" class="input">
+        </label>
+
+        <label class="option">
+          <input type="radio" class="option__input" name="widget-display" data-toggle="#widget-display-3">
+          <span>При скролле</span>
+        </label>
+        <label class="field field--small hidden" id="widget-display-3">
+            <span class="field__title">Проскроллено в px до открытия</span>
+            <input type="number" class="input">
+        </label>
+      </div>
+
+      <div class="button-row">
+        <a class="button button--primary" href="4.html">Сохранить</a>
+        <a class="button" href="/">Отмена</a>
+      </div>
+    </section>
+  </div>
+
+  @@include('partials/widget-preview-position.html', { type: 'video' })
+</main>

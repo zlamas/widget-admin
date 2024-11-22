@@ -1,0 +1,27 @@
+.tooltip
+  position: absolute
+  display: none
+  width: max-content
+  background: #0081E6
+  border-radius: 2px
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15)
+  color: white
+  font-size: 14px
+  line-height: 22px
+  padding: 6px 8px
+  animation: 0.5s fade-in
+
+  &--visible
+    display: block
+
+  &--relative
+    position: relative
+
+  &::after
+    content: ""
+    position: absolute
+    width: 8px
+    height: 8px
+    background: inherit
+    border-radius: 2px
+    rotate: 45deg

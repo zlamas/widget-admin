@@ -1,0 +1,56 @@
+@use "sass:color"
+@use "sass:list"
+
+$desktop: 1280px
+$tablet: 768px
+
+@mixin font-face($family, $name, $weight)
+  @font-face
+    font-family: "#{$family}"
+    src: url("/fonts/#{$name}.woff2") format("woff2")
+    font-weight: $weight
+    font-display: swap
+
+@mixin flex($gap: 0, $options...)
+  @if list.index($options, inline)
+    display: inline-flex
+  @else
+    display: flex
+
+  @if $gap != 0
+    gap: $gap
+
+  @if list.index($options, column)
+    flex-direction: column
+
+  @if list.index($options, center)
+    align-items: center
+
+  @if list.index($options, wrap)
+    flex-wrap: wrap
+
+@mixin hover-darken($prop, $color, $amount, $transition-time: 0)
+  #{$prop}: $color
+  cursor: pointer
+
+  @if $transition-time != 0
+    transition: $prop $transition-time
+
+  &:hover
+    #{$prop}: color.adjust($color, $lightness: $amount)
+
+@mixin desktop
+  @media (min-width: $desktop)
+    @content
+
+@mixin tablet
+  @media (min-width: $tablet) and (max-width: #{$desktop - 1})
+    @content
+
+@mixin mobile
+  @media (max-width: #{$tablet - 1})
+    @content
+
+@mixin not-desktop
+  @media (max-width: #{$desktop - 1})
+    @content

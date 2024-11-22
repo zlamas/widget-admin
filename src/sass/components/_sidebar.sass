@@ -1,0 +1,73 @@
+@use "../mixins" as *
+
+.sidebar
+  @include flex(0, column)
+  width: 270px
+  height: 100%
+  background: white
+  padding: 9px 16px 8px 8px
+
+  @include not-desktop
+    position: fixed
+    translate: -100% 0
+    transition: translate 0.3s, box-shadow 0.3s
+    z-index: 99
+
+    &--open
+      box-shadow: 4px 0 4px rgba(0, 0, 0, 0.2)
+      translate: 0
+
+  @include mobile
+    width: 100%
+
+  &__top
+    @include flex(0, center)
+    justify-content: space-between
+    border-bottom: 1px solid #EBEBEB
+    margin: 0 12px 20px
+    padding: 24px 8px
+
+  &__logo
+    height: 22px
+
+  &__close
+    @include desktop
+      display: none
+
+  &__list
+    margin-left: 4px
+
+    & + &
+      border-top: 1px solid #EBEBEB
+
+  &__item
+    @include flex(12px, center)
+    border-radius: 8px
+    padding: 16px
+    transition: background 0.2s
+
+    &:hover
+      background: #EBEBEB
+
+  &__icon
+    width: 24px
+    height: 24px
+
+  &__sublist
+    margin-left: 12px
+
+  &__block
+    background: #F6F6F6
+    border-radius: 8px
+    margin: 0
+
+  &__bottom
+    margin-top: auto
+    padding: 12px
+
+.socials
+  @include flex(8px)
+
+.support
+  @include flex(12px, center)
+  margin: 25px 0

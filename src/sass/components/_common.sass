@@ -1,0 +1,226 @@
+@use '../mixins' as *
+
+$link: #1890FF
+
+.hidden
+  display: none !important
+
+.h1,
+.h2
+  font-size: 18px
+
+.h3
+  font-size: 16px
+  margin-bottom: 8px
+
+.h2,
+.h3,
+.h4
+  font-weight: 500
+
+.heading
+  margin-bottom: 20px
+
+  &:not(:first-child)
+    margin-top: 20px
+
+  &__large
+    font-size: 25px
+
+.link
+  @include hover-darken(color, $link, -20%, 0.2s)
+
+.back
+  @include flex(12px, center)
+  font-size: 18px
+  margin: 30px
+
+  &::before
+    content: url(/images/back.svg)
+
+.expand
+  @include flex(12px, center)
+  cursor: pointer
+
+  &--arrow
+    &::after
+      @include flex(0, inline)
+      content: url(/images/down_arrow.svg)
+
+  &--expanded
+    &::after
+      rotate: 0.5turn
+
+.separator
+  min-height: 1px
+  min-width: 1px
+  background: #EBEBEB
+
+  &--vertical
+    height: 100%
+
+.description
+  color: #9BABC5
+
+  .field + &
+    margin-top: 8px
+
+.highlight
+  color: #DC3528
+  white-space: nowrap
+
+.icon-button
+  width: 24px
+  height: 24px
+  background-color: transparent
+  background-position: center
+  background-repeat: no-repeat
+  cursor: pointer
+
+  &--fill
+    @include hover-darken(background, #F0F4FA, -10%, 0.2s)
+    border-radius: 12px
+    padding: 10px
+
+  &--close
+    background-image: url(/images/close.svg)
+
+  &--nav
+    background-image: url(/images/down_arrow.svg)
+
+  &--up
+    rotate: 0.5turn
+
+.contact
+  @include flex(30px, center)
+  justify-content: flex-end
+  margin-top: 30px
+
+  &__tooltip
+    text-align: right
+
+    &::after
+      right: -3px
+      top: 0
+      bottom: 0
+      margin: auto
+
+.field
+  display: block
+  margin-top: 20px
+
+  &--small
+    font-size: 12px
+    margin-top: 0
+
+    input
+      max-width: 200px
+
+  &__title
+    display: block
+    margin-bottom: 8px
+
+  &__row
+    display: grid
+    gap: 10px 40px
+    grid-template-columns: 1fr 1fr
+    align-items: center
+
+    @include mobile
+      grid-template-columns: auto
+
+.required
+  .field__title::before
+    content: '* '
+    color: #DC3528
+
+.input
+  width: 100%
+  background: #F0F2F5
+  border: 0
+  border-radius: 5px
+  color: inherit
+  font-family: inherit
+  font-size: 16px
+  padding: 16px 20px
+
+  &:disabled
+    opacity: 50%
+
+  &--number
+    max-width: 100px
+
+.textarea
+  font-size: 14px
+  resize: none
+
+.help
+  @include flex(5px, center)
+  cursor: pointer
+
+  &::after
+    @include flex
+    content: url(/images/question-circle.svg)
+
+.button-row
+  @include flex(20px, wrap)
+  margin-top: 30px
+
+.switch-row
+  @include flex(10px, center)
+  max-width: 240px
+
+  &__label
+    flex: 1
+
+.widget-controls
+  @include flex(18px, center)
+
+  &--small
+    gap: 5px
+    height: 25px
+
+  &__button
+    @include flex(0, center)
+    position: relative
+    height: 100%
+    border-radius: 50%
+    cursor: pointer
+
+    img
+      height: 100%
+
+    &:hover .tooltip
+      display: block
+
+  &__tooltip
+    left: 100%
+    margin-left: 12px
+
+    &::after
+      left: -3px
+      top: 0
+      bottom: 0
+      margin: auto
+
+.email
+  @include flex(10px)
+
+  @include mobile
+    flex-direction: column
+    align-items: flex-start
+
+.note
+  @include flex(6px, center)
+  margin: 10px 0
+
+  &::before
+    content: url(/images/attention.svg)
+
+.end-action
+  @include flex(10px, center)
+  margin: 20px 0
+
+@keyframes fade-in
+  0%
+    opacity: 0

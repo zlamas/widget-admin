@@ -1,0 +1,17 @@
+<section class="widget-preview">
+  <div class="section__title heading">
+    <h2 class="h2">Превью</h2>
+    <div class="description">Возможность предварительного просмотра (превью) изменений в реальном времени.</div>
+  </div>
+  <div class="widget-preview__view">
+    <img class="widget-preview__bg" src="@@webRoot/images/preview_bg.png" alt="">
+@@if (type == 'video') {
+    <img class="widget-preview__widget" src="@@webRoot/images/video-widget-preview.png" alt="">
+}
+@@if (type == 'multi') {
+    <img class="widget-preview__widget multibutton__icon" src="@@webRoot/images/multi-icon-large-1.svg" alt="">
+}
+  </div>
+
+  @@include('partials/contact.html')
+</section>

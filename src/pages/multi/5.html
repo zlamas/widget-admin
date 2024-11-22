@@ -1,0 +1,42 @@
+@@include('partials/header.html', { title: 'Добавить мультикнопку' })
+
+<main class="main">
+  <h1 class="heading h1">Добавить мультикнопку</h1>
+
+  @@include('partials/steps.html', { step: 5 })
+
+  <a href="3.html" class="back">Вернуться в редактирование</a>
+
+  <section class="section">
+    <h2 class="heading h2">Код для размещения на сайте</h2>
+
+    <div class="field__row">
+      <div>
+        <div class="description">Перед закрывающим тегом <span class="highlight">&lt;/body&gt;</span> вставьте следующий код:</div>
+
+        <div class="field copyable">
+          <textarea class="input textarea" rows="6" readonly>&lt;link rel="stylesheet" href="https://cdn.saas-support.com/widget/cbk.css"&gt;
+&lt;script type="text/javascript" src="https://cdn.saas-support.com/widget/cbk.js?wcb_code=cd83645fa0aa21b65b9752f41aefc8e9" charset="UTF-8" async&gt;&lt;/script&gt;</textarea>
+          <button class="icon-button copyable__button"></button>
+        </div>
+      </div>
+      <div>
+        <div class="description">Вы можете вставить его сейчас или добавить после перехода к дополнительным настройкам.</div>
+        <div class="note">Обратите внимание: код устанавливается один раз и должен совпадать с кодом из личного кабинета для данного сайта.</div>
+        <label class="field">
+            <span class="field__title">Или отправьте инструкцию своему программисту</span>
+            <span class="email">
+              <input type="email" class="input" placeholder="Введите e-mail программиста">
+              <a class="button" href="6.html">Отправить</a>
+            </span>
+        </label>
+      </div>
+    </div>
+
+    <div class="button-row">
+      <a class="button button--primary" href="6.html">Сохранить</a>
+    </div>
+  </section>
+
+  @@include('partials/contact.html')
+</main>

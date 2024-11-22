@@ -1,0 +1,66 @@
+@@include('partials/header.html', { title: 'Добавить мультикнопку' })
+
+<main class="main">
+  <h1 class="heading h1">Добавить мультикнопку</h1>
+
+  @@include('partials/steps.html', { step: 3 })
+
+  <a href="2.html" class="back">Вернуться к внешнему виду</a>
+
+  @@include('partials/widget-preview-position.html', { type: 'multi' })
+
+  <section class="section">
+    <div class="field__row">
+      <div>
+        <h2 class="heading h2">Анимация</h2>
+        <div class="description">Чтобы сделать вашу мультикнопку более привлекательной и интерактивной, выберите одну из доступных анимаций.</div>
+      </div>
+      <label>
+        <span class="field__title">Анимация кнопки</span>
+        <select class="input select">
+          <option value="bounce" selected>Bounce</option>
+        </select>
+      </label>
+    </div>
+
+    <h3 class="heading h3">Отображение</h3>
+    <div class="field">
+      <label class="switch-row">
+        <span class="switch-row__label">Убрать логотип WebYm</span>
+        <input type="checkbox" class="switch-input">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <div class="field radio-toggle">
+      <h4 class="heading">Отображение виджета</h4>
+      <label class="option">
+        <input type="radio" class="option__input" name="widget-display" checked>
+        <span>Сразу</span>
+      </label>
+
+      <label class="option">
+        <input type="radio" class="option__input" name="widget-display" data-toggle="#widget-display-2">
+        <span>Через время</span>
+      </label>
+      <label class="field field--small hidden" id="widget-display-2">
+          <span class="field__title">Время до открытия</span>
+          <input type="number" class="input">
+      </label>
+
+      <label class="option">
+        <input type="radio" class="option__input" name="widget-display" data-toggle="#widget-display-3">
+        <span>При скролле</span>
+      </label>
+      <label class="field field--small hidden" id="widget-display-3">
+          <span class="field__title">Проскроллено в px до открытия</span>
+          <input type="number" class="input">
+      </label>
+    </div>
+
+    <div class="button-row">
+      <a class="button button--primary" href="4.html">Сохранить</a>
+      <a class="button" href="/">Отмена</a>
+    </div>
+  </section>
+</main>

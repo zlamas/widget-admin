@@ -1,0 +1,49 @@
+<div class="section steps">
+  <div class="steps__wrapper">
+    <div class="step @@if (step == 1) { step--current }">
+      <span class="step__number">Шаг 1</span>
+      <div class="step__name">
+        <img class="step__icon" src="/images/step-1.svg" alt="">
+        <span>Общие настройки</span>
+      </div>
+    </div>
+    <div class="step @@if (step == 2) { step--current }">
+      <span class="step__number">Шаг 2</span>
+      <div class="step__name">
+        <img class="step__icon" src="/images/step-2.svg" alt="">
+        <span>Внешний вид</span>
+      </div>
+    </div>
+    <div class="step @@if (step == 3) { step--current }">
+      <span class="step__number">Шаг 3</span>
+      <div class="step__name">
+        <img class="step__icon" src="/images/step-3.svg" alt="">
+        <span>Расположение</span>
+      </div>
+    </div>
+    <div class="step @@if (step == 4) { step--current }">
+      <span class="step__number">Шаг 4</span>
+      <div class="step__name">
+        <img class="step__icon" src="/images/step-4.svg" alt="">
+        <span>Дополнительно</span>
+      </div>
+    </div>
+    <div class="step @@if (step == 5) { step--current }">
+      <span class="step__number">Шаг 5</span>
+      <div class="step__name">
+        <img class="step__icon" src="/images/step-5.svg" alt="">
+        <span>Код виджета</span>
+      </div>
+    </div>
+    <div class="step @@if (step == 6) { step--current }">
+      <span class="step__number">Шаг 6</span>
+      <div class="step__name">
+        <img class="step__icon" src="/images/step-6.svg" alt="">
+        <span>Готово к работе</span>
+      </div>
+    </div>
+  </div>
+  <div class="steps__progress">
+    <div class="steps__progress-bar progress--@@step"></div>
+  </div>
+</div>

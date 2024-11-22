@@ -1,0 +1,55 @@
+@use "../mixins" as *
+
+.widget-preview
+  padding: 20px 0
+
+  @include mobile
+    padding: 10px
+
+  &__block
+    display: grid
+    gap: 15px 10px
+    grid-template-columns: auto minmax(auto, 1024px)
+    justify-content: center
+
+    @include mobile
+      gap: 10px 5px
+
+  &__slider
+    --range-accent: #DC3528
+    @include flex(10px, center)
+
+    &--horizontal
+      grid-column: 2
+
+    &--vertical
+      flex-direction: column
+
+  &__view
+    position: relative
+    max-height: 540px
+    border-radius: 25px
+    overflow: hidden
+
+    @include mobile
+      border-radius: 10px
+
+  &__bg
+    width: 100%
+
+  &__widget
+    position: absolute
+
+    &:not(&--movable)
+      bottom: 20px
+      right: 15px
+      max-width: 177px
+      max-height: 80%
+
+    &--movable
+      left: var(--widget-x)
+      bottom: var(--widget-y)
+      translate: calc(-1 * var(--widget-x)) var(--widget-y)
+
+    &--video
+      width: 17%

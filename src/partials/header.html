@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Кабинет</title>
+<link rel="stylesheet" href="@@webRoot/css/main.css">
+<script defer src="@@webRoot/js/main.js"></script>
+
+<body class="profile">
+<nav class="sidebar">
+  <div class="sidebar__top">
+    <a href="/">
+      <img class="sidebar__logo" src="@@webRoot/images/logo.svg" alt="">
+    </a>
+    <button class="icon-button icon-button--close sidebar__close"></button>
+  </div>
+
+  <ul class="sidebar__list">
+    <li>
+      <a href="/" class="sidebar__item">
+        <img class="sidebar__icon" src="@@webRoot/images/widgets.svg" alt="">
+        <span>Виджеты</span>
+      </a>
+    </li>
+    <li>
+      <ul class="sidebar__list sidebar__sublist">
+        <li>
+          <a href="/multi/1.html" class="sidebar__item">
+            <img class="sidebar__icon" src="@@webRoot/images/multi.svg" alt="">
+            <span>Мультикнопка</span>
+          </a>
+        </li>
+        <li>
+          <a href="/video/1.html" class="sidebar__item">
+            <img class="sidebar__icon" src="@@webRoot/images/play.svg" alt="">
+            <span>Видео-виджет</span>
+          </a>
+        </li>
+        <li>
+          <a href="/" class="sidebar__item">
+            <img class="sidebar__icon" src="@@webRoot/images/call.svg" alt="">
+            <span>Обратный звонок</span>
+          </a>
+        </li>
+        <li>
+          <a href="/" class="sidebar__item">
+            <img class="sidebar__icon" src="@@webRoot/images/chat.svg" alt="">
+            <span>Онлайн-чат</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul class="sidebar__list">
+    <li>
+      <div class="sidebar__item expand expand--arrow expand--expanded" data-collapse="#block1">
+        <img class="sidebar__icon" src="@@webRoot/images/settings.svg" alt="">
+        <span>Управление</span>
+      </div>
+      <ul id="block1" class="sidebar__list sidebar__sublist sidebar__block">
+        <li>
+          <a href="/" class="sidebar__item">
+            <img class="sidebar__icon" src="@@webRoot/images/profile.svg" alt="">
+            <span>Профиль</span>
+          </a>
+        </li>
+        <li>
+          <a href="/presets.html" class="sidebar__item">
+            <img class="sidebar__icon" src="@@webRoot/images/puzzle.svg" alt="">
+            <span>Пресеты</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="sidebar__bottom">
+    <div class="socials">
+      <a class="socials__link icon-button--fill" href="/">
+        <img width="20" height="20" src="@@webRoot/images/telegram.svg" alt="">
+      </a>
+      <a class="socials__link icon-button--fill" href="/">
+        <img width="20" height="20" src="@@webRoot/images/whatsapp.svg" alt="">
+      </a>
+      <a class="socials__link icon-button--fill" href="/">
+        <img width="20" height="20" src="@@webRoot/images/vk.svg" alt="">
+      </a>
+    </div>
+    <a class="support" href="/">
+      <img class="sidebar__icon" src="@@webRoot/images/info.svg" alt="">
+      <span>Справка и поддержка</span>
+    </a>
+    <div>Email: <a class="link" href="mailto:info@gvozd.info">info@gvozd.info</a></div>
+  </div>
+</nav>
+
+<header class="header">
+  <button class="icon-button header__burger"></button>
+
+  <nav class="breadcrumb header__breadcrumb">
+    <ul class="breadcrumb__list">
+      <li class="breadcrumb__item"><a class="link" href="/">Главная</a></li>
+      <li class="breadcrumb__item"><a class="link" href="/">Кабинет</a></li>
+@@if (title) {
+      <li class="breadcrumb__item">@@title</li>
+}
+    </ul>
+  </nav>
+
+  <a href="/" class="header__block header__block--tariff">
+    <img width="24" height="24" src="@@webRoot/images/favorite.svg" alt="">
+    <div>
+      <div class="header__text--top">Ваш тариф</div>
+      <div class="header__text--bottom">Продвинутый</div>
+    </div>
+    <div class="tooltip header__tooltip">до 23 февраля 2024 г.</div>
+  </a>
+  <div class="separator separator--vertical"></div>
+
+  <a href="/" class="header__block header__block--user">
+    <div>
+      <div class="header__text--top">Добро пожаловать</div>
+      <div class="header__text--bottom">Валентин Колесов</div>
+    </div>
+    <img width="20" height="20" src="@@webRoot/images/down_btn.svg" alt="">
+  </a>
+</header>

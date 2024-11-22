@@ -1,0 +1,61 @@
+$thumb-size: 14px
+$track-size: 4px
+
+@mixin range-thumb
+  width: $thumb-size
+  height: $thumb-size
+  box-sizing: border-box
+  appearance: none
+  background: white
+  border: 2px solid var(--range-accent)
+  border-radius: 50%
+  cursor: pointer
+
+:root
+  --range-accent: #91D5FF
+  --range-track: #F5F5F5
+  --range-direction: right
+
+.range
+  &__input
+    inline-size: 100%
+    block-size: $track-size
+    flex: 1
+    appearance: none
+    background: linear-gradient(to var(--range-direction), var(--range-accent) var(--range-progress), var(--range-track) var(--range-progress))
+    border-radius: 99em
+    margin: 0
+
+    &::-webkit-slider-thumb
+      @include range-thumb
+
+    &::-moz-range-thumb
+      @include range-thumb
+
+    &--vertical
+      --range-direction: top
+      direction: rtl
+      writing-mode: vertical-lr
+
+  &__tooltip-track
+    position: relative
+    height: 50px
+    margin: 0 calc($thumb-size / 2)
+
+  &__tooltip
+    top: 10px
+    left: var(--range-progress)
+    translate: -50% 0
+
+    &::after
+      bottom: -3px
+      left: 0
+      right: 0
+      margin: auto
+
+  &__name
+    font-size: 12px
+
+  &__percent
+    min-width: 40px
+    text-align: center

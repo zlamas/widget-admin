@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Кабинет</title>
+<link rel="stylesheet" href="../css/main.css">
+<script defer src="../js/main.js"></script>
+
+<body class="profile">
+<nav class="sidebar">
+  <div class="sidebar__top">
+    <a href="/">
+      <img class="sidebar__logo" src="../images/logo.svg" alt="">
+    </a>
+    <button class="icon-button icon-button--close sidebar__close"></button>
+  </div>
+
+  <ul class="sidebar__list">
+    <li>
+      <a href="/" class="sidebar__item">
+        <img class="sidebar__icon" src="../images/widgets.svg" alt="">
+        <span>Виджеты</span>
+      </a>
+    </li>
+    <li>
+      <ul class="sidebar__list sidebar__sublist">
+        <li>
+          <a href="/multi/1.html" class="sidebar__item">
+            <img class="sidebar__icon" src="../images/multi.svg" alt="">
+            <span>Мультикнопка</span>
+          </a>
+        </li>
+        <li>
+          <a href="/video/1.html" class="sidebar__item">
+            <img class="sidebar__icon" src="../images/play.svg" alt="">
+            <span>Видео-виджет</span>
+          </a>
+        </li>
+        <li>
+          <a href="/" class="sidebar__item">
+            <img class="sidebar__icon" src="../images/call.svg" alt="">
+            <span>Обратный звонок</span>
+          </a>
+        </li>
+        <li>
+          <a href="/" class="sidebar__item">
+            <img class="sidebar__icon" src="../images/chat.svg" alt="">
+            <span>Онлайн-чат</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul class="sidebar__list">
+    <li>
+      <div class="sidebar__item expand expand--arrow expand--expanded" data-collapse="#block1">
+        <img class="sidebar__icon" src="../images/settings.svg" alt="">
+        <span>Управление</span>
+      </div>
+      <ul id="block1" class="sidebar__list sidebar__sublist sidebar__block">
+        <li>
+          <a href="/" class="sidebar__item">
+            <img class="sidebar__icon" src="../images/profile.svg" alt="">
+            <span>Профиль</span>
+          </a>
+        </li>
+        <li>
+          <a href="/presets.html" class="sidebar__item">
+            <img class="sidebar__icon" src="../images/puzzle.svg" alt="">
+            <span>Пресеты</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="sidebar__bottom">
+    <div class="socials">
+      <a class="socials__link icon-button--fill" href="/">
+        <img width="20" height="20" src="../images/telegram.svg" alt="">
+      </a>
+      <a class="socials__link icon-button--fill" href="/">
+        <img width="20" height="20" src="../images/whatsapp.svg" alt="">
+      </a>
+      <a class="socials__link icon-button--fill" href="/">
+        <img width="20" height="20" src="../images/vk.svg" alt="">
+      </a>
+    </div>
+    <a class="support" href="/">
+      <img class="sidebar__icon" src="../images/info.svg" alt="">
+      <span>Справка и поддержка</span>
+    </a>
+    <div>Email: <a class="link" href="mailto:info@gvozd.info">info@gvozd.info</a></div>
+  </div>
+</nav>
+
+<header class="header">
+  <button class="icon-button header__burger"></button>
+
+  <nav class="breadcrumb header__breadcrumb">
+    <ul class="breadcrumb__list">
+      <li class="breadcrumb__item"><a class="link" href="/">Главная</a></li>
+      <li class="breadcrumb__item"><a class="link" href="/">Кабинет</a></li>
+
+      <li class="breadcrumb__item">Добавить видео-виджет</li>
+
+    </ul>
+  </nav>
+
+  <a href="/" class="header__block header__block--tariff">
+    <img width="24" height="24" src="../images/favorite.svg" alt="">
+    <div>
+      <div class="header__text--top">Ваш тариф</div>
+      <div class="header__text--bottom">Продвинутый</div>
+    </div>
+    <div class="tooltip header__tooltip">до 23 февраля 2024 г.</div>
+  </a>
+  <div class="separator separator--vertical"></div>
+
+  <a href="/" class="header__block header__block--user">
+    <div>
+      <div class="header__text--top">Добро пожаловать</div>
+      <div class="header__text--bottom">Валентин Колесов</div>
+    </div>
+    <img width="20" height="20" src="../images/down_btn.svg" alt="">
+  </a>
+</header>
+
+
+<main class="main">
+  <div class="popup">
+   <div class="popup__top">
+    <img width="28" height="28" src="../images/question-circle.svg" alt="">
+    <button class="icon-button icon-button--close popup__close"></button>
+  </div>
+  <h2 class="heading h2">Справка о каком то пункте</h2>
+  <p>Данная настройка позволяет выбрать, что будет отображаться в окне виджета до перехода в режим просмотра</p>
+  <p>На выбор доступно 2 варианта: Картинка из видео и Видео-предпросмотр</p>
+  <img width="200" height="300" class="popup__image" src="../images/video-frame.png" alt="">
+  <p>Данная настройка позволяет выбрать, что будет отображаться в окне виджета до перехода в режим просмотра</p>
+  <p>На выбор доступно 2 варианта: Картинка из видео и Видео-предпросмотр</p>
+</div>
+
+  <div class="picker color-picker">
+  <div class="color-picker__area">
+    <div class="color-picker__marker"></div>
+  </div>
+  <input type="range" class="color-picker__input color-picker__hue" value="20" min="0" max="360" step="any">
+  <div class="color-picker__values">
+    <label class="color-picker__value">
+      <span>Hex</span>
+      <input class="color-picker__input color-picker__field" type="text" readonly>
+    </label>
+    <label class="color-picker__value">
+      <span>R</span>
+      <input class="color-picker__input color-picker__field" type="number" min="0" max="255" readonly>
+    </label>
+    <label class="color-picker__value">
+      <span>G</span>
+      <input class="color-picker__input color-picker__field" type="number" min="0" max="255" readonly>
+    </label>
+    <label class="color-picker__value">
+      <span>B</span>
+      <input class="color-picker__input color-picker__field" type="number" min="0" max="255" readonly>
+    </label>
+  </div>
+</div>
+
+
+  <h1 class="heading h1">Добавить видео-виджет</h1>
+
+  <div class="section steps">
+  <div class="steps__wrapper">
+    <div class="step ">
+      <span class="step__number">Шаг 1</span>
+      <div class="step__name">
+        <img class="step__icon" src="/images/step-1.svg" alt="">
+        <span>Общие настройки</span>
+      </div>
+    </div>
+    <div class="step ">
+      <span class="step__number">Шаг 2</span>
+      <div class="step__name">
+        <img class="step__icon" src="/images/step-2.svg" alt="">
+        <span>Внешний вид</span>
+      </div>
+    </div>
+    <div class="step  step--current ">
+      <span class="step__number">Шаг 3</span>
+      <div class="step__name">
+        <img class="step__icon" src="/images/step-3.svg" alt="">
+        <span>Расположение</span>
+      </div>
+    </div>
+    <div class="step ">
+      <span class="step__number">Шаг 4</span>
+      <div class="step__name">
+        <img class="step__icon" src="/images/step-4.svg" alt="">
+        <span>Дополнительно</span>
+      </div>
+    </div>
+    <div class="step ">
+      <span class="step__number">Шаг 5</span>
+      <div class="step__name">
+        <img class="step__icon" src="/images/step-5.svg" alt="">
+        <span>Код виджета</span>
+      </div>
+    </div>
+    <div class="step ">
+      <span class="step__number">Шаг 6</span>
+      <div class="step__name">
+        <img class="step__icon" src="/images/step-6.svg" alt="">
+        <span>Готово к работе</span>
+      </div>
+    </div>
+  </div>
+  <div class="steps__progress">
+    <div class="steps__progress-bar progress--3"></div>
+  </div>
+</div>
+
+
+  <a href="2.html" class="back">Вернуться к внешнему виду</a>
+
+  <div class="row">
+    <section class="section">
+      <h3 class="heading h3">Загрузите видео контент</h3>
+      <input type="file" id="upload-video" class="upload__input" accept=".mp4, .avi, .mov">
+      <label class="upload-video" for="upload-video">
+        <span>Перенесите файл или кликните чтобы добавить</span>
+        <span class="upload__format">
+          Формат видео файла
+          <br>mp4, avi, mov
+          <br>215x355 | &lt; 10Mb
+        </span>
+      </label>
+
+      <div class="video hidden">
+        <button class="icon-button video__play"></button>
+        <div class="widget-controls">
+          <button class="widget-controls__button delete">
+            <img src="../images/widget-delete.svg" alt="">
+
+          </button>
+          <label for="upload-video" class="widget-controls__button">
+            <img src="../images/widget-edit.svg" alt="">
+          </label>
+        </div>
+      </div>
+
+      <div class="field help">
+        <label class="switch-row">
+          <input type="checkbox" class="switch-input expand expand--expanded" data-collapse="#video-preview-block" checked>
+          <span class="switch"></span>
+          <span class="switch-row__label">Добавить превью</span>
+        </label>
+      </div>
+      <div class="description">Загрузите превью, оно будет отображаться в виджете до момента, пока клиент не нажмет на видео.</div>
+
+      <div id="video-preview-block">
+        <label for="upload-preview" class="upload__label">Загрузите превью</label>
+        <span class="upload__format">
+          Формат файла - jpg, jpeg, png, webp
+          <br>Размер - 215x355 | &lt; 1Mb
+        </span>
+        <div class="upload__preview">
+          <input type="file" id="upload-preview" class="upload__input" accept=".jpg, .jpeg, .png, .webp">
+          <img class="upload__thumb" src="../images/video-preview-thumb.png" alt="">
+          <span class="upload__name">xxx.png</span>
+          <button class="icon-button upload__delete delete"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h3 class="heading h3">Отображение</h3>
+      <div class="field">
+        <label class="switch-row">
+          <span class="switch-row__label">Убрать логотип WebYm</span>
+          <input type="checkbox" class="switch-input">
+          <span class="switch"></span>
+        </label>
+      </div>
+
+      <div class="color field">
+        <div class="color__block">
+          <span>Цвет обводки видео</span>
+          <button class="color__icon color--current picker-open" data-picker=".color-picker" data-color="#186658"></button>
+          <span class="color__hex">#186658</span>
+        </div>
+      </div>
+
+      <div class="field radio-toggle">
+        <h4 class="heading">Отображение виджета</h4>
+        <label class="option">
+          <input type="radio" class="option__input" name="widget-display" checked>
+          <span>Сразу</span>
+        </label>
+
+        <label class="option">
+          <input type="radio" class="option__input" name="widget-display" data-toggle="#widget-display-2">
+          <span>Через время</span>
+        </label>
+        <label class="field field--small hidden" id="widget-display-2">
+            <span class="field__title">Время до открытия</span>
+            <input type="number" class="input">
+        </label>
+
+        <label class="option">
+          <input type="radio" class="option__input" name="widget-display" data-toggle="#widget-display-3">
+          <span>При скролле</span>
+        </label>
+        <label class="field field--small hidden" id="widget-display-3">
+            <span class="field__title">Проскроллено в px до открытия</span>
+            <input type="number" class="input">
+        </label>
+      </div>
+
+      <div class="button-row">
+        <a class="button button--primary" href="4.html">Сохранить</a>
+        <a class="button" href="/">Отмена</a>
+      </div>
+    </section>
+  </div>
+
+  <section class="widget-preview">
+  <div class="section__title heading">
+    <h2 class="h2">Положение виджета</h2>
+    <div class="description">Настройте положение виджета на Вашем сайте с помощью вертикальных и горизонтальных ползунков</div>
+  </div>
+
+  <div class="widget-preview__block">
+    <div class="range widget-preview__slider widget-preview__slider--horizontal">
+      <input type="range" class="range__input" value="28" min="0" max="100" step="1">
+      <span class="range__percent"></span>
+    </div>
+    <div class="range widget-preview__slider widget-preview__slider--vertical">
+      <input type="range" class="range__input range__input--vertical" value="28" min="0" max="100" step="1">
+      <span class="range__percent"></span>
+    </div>
+    <div class="widget-preview__view">
+      <img class="widget-preview__bg" src="../images/preview_bg.png" alt="">
+
+      <img class="widget-preview__widget widget-preview__widget--video widget-preview__widget--movable" src="../images/video-widget-preview.png" alt="">
+
+
+    </div>
+  </div>
+</section>
+
+</main>

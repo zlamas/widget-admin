@@ -1,0 +1,32 @@
+@use "mixins" as *
+
+@mixin video-frame
+  @include flex(0, column, center)
+  width: 200px
+  height: 260px
+  border-radius: 30px
+
+.upload-video
+  @include video-frame
+  background: #FAFAFA
+  border: 1px solid #D9D9D9
+  line-height: 1.8
+  padding: 45px 0
+  text-align: center
+  cursor: pointer
+
+  &::before
+    content: url(/images/upload.svg)
+    margin: auto
+
+.video
+  @include video-frame
+  background: rgba(0, 0, 0, 0.2) url(/images/video-widget-frame.png) center / cover
+  background-blend-mode: darken
+  padding: 16px
+
+  &__play
+    width: 40px
+    height: 40px
+    background-image: url(/images/play-video.svg)
+    margin: auto

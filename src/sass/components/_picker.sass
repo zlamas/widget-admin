@@ -1,0 +1,27 @@
+.picker
+  position: absolute
+  left: min(calc(var(--base-offset, 0px) - var(--pointer-offset, 0px) + var(--offset, 0px)), 0px)
+  max-width: 100vw
+  background: white
+  border-radius: 12px
+  box-shadow: 0 16px 32px rgba(35, 23, 5, 0.26)
+  padding: 16px
+  cursor: auto
+  text-align: left
+  touch-action: none
+  -webkit-user-select: none
+  user-select: none
+  visibility: hidden
+  z-index: 9
+
+  &::after
+    content: ""
+    position: absolute
+    bottom: -3px
+    left: calc(var(--pointer-offset, 0px) - var(--offset, 0px))
+    width: 16px
+    height: 16px
+    background: inherit
+    border-radius: 2px
+    rotate: 45deg
+    transform-origin: top left
